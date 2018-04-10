@@ -17,7 +17,7 @@ gulp.task('es6', function(done) {
     webpack({
       entry: './src/js/index.js',
       output: {
-        path: __dirname + '/src/js/compiled',
+        path: __dirname + '/src/js/',
         filename: 'bundle.js'
       },
       devtool: 'source-map',
@@ -91,7 +91,7 @@ gulp.task("copy", function(){
     .pipe(gulp.dest("dist/"));
     gulp.src(["src/css/**/*.css"], {base: "src"})
     .pipe(gulp.dest("dist/"));
-    gulp.src(["src/js/compiled/*.js"], {base: "src"})
+    gulp.src(["src/js/bundle.js"], {base: "src"})
     .pipe(gulp.dest("dist/"));
     gulp.src(["src/*.json"], {base: "src"})
     .pipe(gulp.dest("dist/"));

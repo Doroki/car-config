@@ -11,7 +11,7 @@ const AppModule = (function() {
     };
     
     const getCarData = function() {  // Fetch data from JSON file and same to "offers"
-        fetch('../car_data.json')
+        fetch('./car_data.json')
             .then(response => response.json())
             .then(data => {
                 offers.model = data.cars;

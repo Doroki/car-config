@@ -1,0 +1,183 @@
+/*=============================================
+=                  Reset CSS                  =
+=============================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, main, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, main, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0; }
+
+input[type="color"]::-webkit-color-swatch {
+  border: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none; }
+
+/*=====  End of Reset CSS  ======*/
+html, body {
+  height: 100%;
+  font-family: sans-serif; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #CCC;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 950px;
+  min-height: 350px;
+  background-color: #FFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 0px #000;
+          box-shadow: 0px 0px 5px 0px #000; }
+  .app__config {
+    padding: 25px;
+    width: 70%; }
+  .app__summary {
+    padding: 25px 35px;
+    width: 30%; }
+
+.config__category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.config__title {
+  font-weight: bold;
+  font-size: 17px; }
+
+.config__header {
+  width: 100%;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: capitalize;
+  line-height: 30px; }
+
+.config__buttons {
+  width: 20%;
+  border: 0;
+  background-color: #CCC;
+  color: #000;
+  margin: 0px 5px 5px 0px;
+  padding: 7px 0 7px 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  cursor: pointer; }
+  .config__buttons--selected {
+    background-color: #3b3b3b;
+    color: #FFF; }
+  .config__buttons:hover:not(.config__buttons--selected) {
+    background-color: gray;
+    color: #FFF; }
+
+.config__colors {
+  width: 45px;
+  height: 40px;
+  margin-right: 5px;
+  border: none;
+  background: transparent;
+  -webkit-transition: 0.1s all linear;
+  transition: 0.1s all linear;
+  cursor: pointer; }
+  .config__colors--selected {
+    background-color: #000;
+    border: 1px solid #000; }
+
+.summary {
+  background-color: #000;
+  color: #FFF; }
+  .summary__title {
+    text-align: right;
+    font-size: 17px;
+    font-weight: bold; }
+  .summary #img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #FFF;
+    width: 100%;
+    height: 50%;
+    margin: 15px 0;
+    color: #CCC;
+    font-size: 120px; }
+  .summary__category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    line-height: 17px;
+    font-size: 13px; }
+    .summary__category--price {
+      line-height: 40px; }

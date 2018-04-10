@@ -1,0 +1,33 @@
+.summary {
+    background-color: #000;
+    color: #FFF;
+    
+    &__title {
+        text-align: right;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    & #img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFF;
+        width: 100%;
+        height: 50%;
+        margin: 15px 0;
+        color: #CCC;
+        font-size: 120px;
+    }
+
+    &__category {
+        display: flex;
+        justify-content: space-between;
+        line-height: 17px;
+        font-size: 13px;
+
+        &--price {
+            line-height: 40px;
+        }
+    }
+}

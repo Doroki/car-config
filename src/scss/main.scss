@@ -1,0 +1,36 @@
+@import "reset.scss";
+
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #CCC;
+    align-items: center;
+    justify-content: center;
+}
+
+.app {
+    display: flex;
+    min-width: 950px;
+    min-height: 350px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #000;
+
+    &__config {
+        padding: 25px;
+        width: 70%;
+    }
+
+    &__summary {
+        padding: 25px 35px;
+        width: 30%;
+    }
+}
+
+@import "car_config.scss";
+@import "summary.scss";

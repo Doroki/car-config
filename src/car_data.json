@@ -1,0 +1,129 @@
+{
+    "cars" : [
+        {
+            "id": "PRO RS3",
+            "view": "fas fa-car",
+            "price": 315400, 
+            "engine": [
+                {
+                    "id": "5.2L 532BHP", 
+                    "price": 98321.23, 
+                    "gearbox": [
+                        {"id": "automatic", "price": 9722.99}
+                    ]
+                },
+                {
+                    "id": "4.2L 443BHP", 
+                    "price": 81200.32, 
+                    "gearbox": [
+                        {"id": "automatic", "price": 9722.99},
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                },
+                {
+                    "id": "3.6L 374BHP", 
+                    "price": 63302.11, 
+                    "gearbox": [
+                        {"id": "automatic", "price": 9722.99},
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                },
+                {
+                    "id": "2.0L 166BHP", 
+                    "price": 37211.36, 
+                    "gearbox": [
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "UBER RS2",
+            "view": "fas fa-truck-moving",
+            "price": 273230, 
+            "engine": [
+                {
+                    "id": "4.2L 443BHP", 
+                    "price": 81200.32, 
+                    "gearbox": [
+                        {"id": "automatic", "price": 9722.99},
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                },
+                {
+                    "id": "3.6L 374BHP", 
+                    "price": 63302.11, 
+                    "gearbox": [
+                        {"id": "automatic", "price": 9722.99},
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                },
+                {
+                    "id": "2.0L 166BHP", 
+                    "price": 37211.36, 
+                    "gearbox": [
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "STANDARD",
+            "view": "fas fa-truck",
+            "price": 193400, 
+            "engine": [
+                {
+                    "id": "3.6L 374BHP", 
+                    "price": 63302.11, 
+                    "gearbox": [
+                        {"id": "automatic", "price": 9722.99},
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                },
+                {
+                    "id": "2.0L 166BHP", 
+                    "price": 37211.36, 
+                    "gearbox": [
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "WK",
+            "view": "fas fa-taxi",
+            "price": 121000, 
+            "engine": [
+                {
+                    "id": "2.0L 166BHP", 
+                    "price": 37211.36, 
+                    "gearbox": [
+                        {"id": "manual", "price": 4731.54}
+                    ]
+                }
+            ]
+        }
+    ],
+    "color": [
+        {
+            "id": "Red",
+            "value": "#ff0000",
+            "price": 1100
+        },
+        {
+            "id": "Silver",
+            "value": "#d1d1d1",
+            "price": 1300
+        },
+        {
+            "id": "Orange",
+            "value": "#e58d34",
+            "price": 900
+        },
+        {
+            "id": "Black",
+            "value": "#282727",
+            "price": 1500
+        }
+    ] 
+}

@@ -1,0 +1,59 @@
+.config {
+
+    &__category {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    &__header {
+        width: 100%;
+        font-size: 16px;
+        line-height: 25px;
+        text-transform: capitalize;
+        line-height: 30px;
+    }
+
+    &__buttons {
+        width: 20%;
+        border: 0;
+        background-color: #CCC;
+        color: #000;
+        margin: 0px 5px 5px 0px;
+        padding: 7px 0 7px 0;
+        font-size: 15px;
+        text-transform: uppercase;
+        transition: 0.2s all linear; 
+        cursor: pointer;
+
+        &--selected {
+            background-color: rgb(59, 59, 59);
+            color: #FFF; 
+        }
+
+        &:hover:not(.config__buttons--selected) {
+            background-color: darken($color: #CCC, $amount: 30%);
+            color: #FFF;
+        }
+    }
+
+    &__colors {
+        width: 45px;
+        height: 40px;
+        margin-right: 5px;
+        border: none;
+        background: transparent;
+        transition: 0.1s all linear;
+        cursor: pointer;
+
+        &--selected {
+            background-color: #000;
+            border: 1px solid #000;
+        }
+    }
+}

@@ -59,6 +59,14 @@ const ConfigModule = (function () {
         }
     };
 
+    const setButtonUsage = function (element) {
+        const parent = element.parentElement;
+        const childs = Array.from(parent.childNodes);
+        childs.forEach(child => child.dataset.usage = "false");
+
+        element.dataset.usage = "true";
+    }; 
+
     const initClickEffects = function () { // Events for visual effects
         for (const element in configArea) {
             if (configArea.hasOwnProperty(element)) {
@@ -90,7 +98,8 @@ const ConfigModule = (function () {
         engine: configArea.engine,
         gearbox: configArea.gearbox,
         color: configArea.color,
-        createConfigElements
+        createConfigElements,
+        setButtonUsage
     };
 })();
 

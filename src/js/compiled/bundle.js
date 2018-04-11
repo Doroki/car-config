@@ -223,32 +223,36 @@ var AppModule = function () {
 
     var events = function events() {
         _car_config2.default.model.addEventListener("click", function (e) {
-            if (e.target.localName !== "button") return;
+            if (e.target.localName !== "button" || e.target.dataset.usage === "true") return;
             var choice = setChosenPart(e, "model");
             findCarParts(e, choice, "engine");
+            _car_config2.default.setButtonUsage(e.target);
         });
 
         _car_config2.default.engine.addEventListener("click", function (e) {
-            if (e.target.localName !== "button") return;
+            if (e.target.localName !== "button" || e.target.dataset.usage === "true") return;
             var choice = setChosenPart(e, "engine");
             findCarParts(e, choice, "gearbox");
+            _car_config2.default.setButtonUsage(e.target);
         });
 
         _car_config2.default.gearbox.addEventListener("click", function (e) {
-            if (e.target.localName !== "button") return;
+            if (e.target.localName !== "button" || e.target.dataset.usage === "true") return;
             var choice = setChosenPart(e, "gearbox");
             findColors(e);
+            _car_config2.default.setButtonUsage(e.target);
         });
 
         _car_config2.default.color.addEventListener("click", function (e) {
             e.preventDefault();
-            if (e.target.localName !== "input") return;
+            if (e.target.localName !== "input" || e.target.dataset.usage === "true") return;
 
             var selectedOption = e.target.value;
             var result = offers["color"].filter(function (part) {
                 return part.value === selectedOption;
             });
             _summary2.default.update(result[0].id, result[0].price, result[0].value, "color");
+            _car_config2.default.setButtonUsage(e.target);
         });
     };
 
@@ -341,6 +345,16 @@ var ConfigModule = function () {
         }
     };
 
+    var setButtonUsage = function setButtonUsage(element) {
+        var parent = element.parentElement;
+        var childs = Array.from(parent.childNodes);
+        childs.forEach(function (child) {
+            return child.dataset.usage = "false";
+        });
+
+        element.dataset.usage = "true";
+    };
+
     var initClickEffects = function initClickEffects() {
         // Events for visual effects
         for (var element in configArea) {
@@ -376,7 +390,8 @@ var ConfigModule = function () {
         engine: configArea.engine,
         gearbox: configArea.gearbox,
         color: configArea.color,
-        createConfigElements: createConfigElements
+        createConfigElements: createConfigElements,
+        setButtonUsage: setButtonUsage
     };
 }();
 

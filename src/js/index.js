@@ -43,30 +43,34 @@ const AppModule = (function() {
 
     const events = function(){
         ConfigModule.model.addEventListener("click", e => {
-            if(e.target.localName !== "button") return;
+            if(e.target.localName !== "button" || e.target.dataset.usage === "true") return;
             const choice = setChosenPart(e, "model");
             findCarParts(e, choice, "engine");
+            ConfigModule.setButtonUsage(e.target);
         });
 
         ConfigModule.engine.addEventListener("click", e => {
-            if(e.target.localName !== "button") return;
+            if(e.target.localName !== "button" || e.target.dataset.usage === "true") return;
             const choice = setChosenPart(e, "engine");
             findCarParts(e, choice, "gearbox");
+            ConfigModule.setButtonUsage(e.target);
         });
 
         ConfigModule.gearbox.addEventListener("click", e => {
-            if(e.target.localName !== "button") return;
+            if(e.target.localName !== "button" || e.target.dataset.usage === "true") return;
             const choice = setChosenPart(e, "gearbox");
             findColors(e);
+            ConfigModule.setButtonUsage(e.target);
         });
 
         ConfigModule.color.addEventListener("click", e => {
             e.preventDefault(); 
-            if(e.target.localName !== "input") return;
+            if(e.target.localName !== "input" || e.target.dataset.usage === "true") return;
    
             const selectedOption = e.target.value;
             const result = offers["color"].filter(part => part.value === selectedOption);
             SummaryModule.update(result[0].id, result[0].price, result[0].value, "color");
+            ConfigModule.setButtonUsage(e.target);
         });
     };
 

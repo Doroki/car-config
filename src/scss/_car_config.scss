@@ -20,7 +20,7 @@
     }
 
     &__buttons {
-        width: 20%;
+        width: 120px;
         border: 0;
         background-color: #CCC;
         color: #000;
@@ -39,6 +39,12 @@
         &:hover:not(.config__buttons--selected) {
             background-color: darken($color: #CCC, $amount: 30%);
             color: #FFF;
+        }
+
+        @media (max-width: 855px) {
+            width: 90px;
+            font-size: 13px;
+            flex-wrap: wrap;
         }
     }
 

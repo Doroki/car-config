@@ -61,10 +61,11 @@ input[type="color"]::-webkit-color-swatch {
 
 /*=====  End of Reset CSS  ======*/
 html, body {
-  height: 100%;
+  min-height: 100%;
   font-family: sans-serif; }
 
 body {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +101,8 @@ body {
             flex-wrap: wrap; } }
   .app__summary {
     padding: 25px 35px;
-    width: 30%; }
+    width: 30%;
+    min-height: 350px; }
     @media (max-width: 955px) {
       .app__summary {
         width: 0;
